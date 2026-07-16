@@ -102,16 +102,7 @@ More on <a href="https://www.linkedin.com/in/mohammedriizwan">LinkedIn</a>
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=riizwannx&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" width="48%" />
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=riizwannx&theme=tokyonight&hide_border=true&background=0d1117" width="48%" />
-
-<br/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=riizwannx&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" width="48%" />
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=riizwannx&theme=tokyo-night&hide_border=true&bg_color=0d1117" width="98%" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=riizwannx&theme=tokyonight&hide_border=true&background=0d1117" width="60%" />
 
 </div>
 
