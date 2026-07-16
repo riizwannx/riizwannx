@@ -12,6 +12,6 @@
   <rect width="1200" height="200" fill="url(#bgGrad)"/>
   <path d="M0,145 C300,185 900,105 1200,150 L1200,200 L0,200 Z" fill="url(#waveGrad)" opacity="0.55"/>
   <path d="M0,165 C350,125 850,195 1200,135 L1200,200 L0,200 Z" fill="#0b1220" opacity="0.55"/>
-  <text x="600" y="88" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="42" font-weight="700" fill="#e2e8f0" letter-spacing="1">Mohammed Rizwan</text>
+  <text x="600" y="88" text-anchor="middle" font-family="Time new roman, Arial, sans-serif" font-size="42" font-weight="700" fill="#e2e8f0" letter-spacing="1">MOHAMMED RIZWAN</text>
   <text x="600" y="124" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="18" fill="#94a3b8">Software Engineer  |  AWS &amp; DevOps</text>
 </svg>
