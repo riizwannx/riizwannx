@@ -1,17 +1,630 @@
-<svg viewBox="0 0 1200 200" xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="1200"
+  height="360"
+  viewBox="0 0 1200 360"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#1e3a5f"/>
+
+    <!-- Background -->
+    <linearGradient id="background" x1="0" y1="0" x2="1200" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020817"/>
+      <stop offset="0.5" stop-color="#071126"/>
+      <stop offset="1" stop-color="#030817"/>
     </linearGradient>
-    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1e3a5f"/>
-      <stop offset="100%" stop-color="#2c527a"/>
+
+    <!-- Blue glow -->
+    <radialGradient id="blueGlow" cx="0" cy="0" r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(155 150) rotate(25) scale(260 210)">
+      <stop stop-color="#008CFF" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#008CFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Purple glow -->
+    <radialGradient id="purpleGlow" cx="0" cy="0" r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(1040 145) rotate(155) scale(270 220)">
+      <stop stop-color="#A855F7" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Cloud gradient -->
+    <linearGradient id="cloudStroke" x1="55" y1="70" x2="310" y2="230" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#2563EB"/>
     </linearGradient>
+
+    <!-- AI gradient -->
+    <linearGradient id="aiStroke" x1="875" y1="70" x2="1115" y2="230" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C084FC"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <!-- Main text -->
+    <linearGradient id="nameGradient" x1="390" y1="100" x2="810" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="0.5" stop-color="#E0E7FF"/>
+      <stop offset="1" stop-color="#F8FAFC"/>
+    </linearGradient>
+
+    <!-- Cloud wave -->
+    <linearGradient id="waveBlue" x1="0" y1="0" x2="600" y2="0">
+      <stop stop-color="#0284C7" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#0EA5E9" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- AI wave -->
+    <linearGradient id="wavePurple" x1="600" y1="0" x2="1200" y2="0">
+      <stop stop-color="#7C3AED" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#A855F7" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow filters -->
+    <filter id="blueBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+
+    <filter id="purpleBlur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+
+    <!-- Clip -->
+    <clipPath id="bannerClip">
+      <rect width="1200" height="360" rx="12"/>
+    </clipPath>
+
   </defs>
-  <rect width="1200" height="200" fill="url(#bgGrad)"/>
-  <path d="M0,145 C300,185 900,105 1200,150 L1200,200 L0,200 Z" fill="url(#waveGrad)" opacity="0.55"/>
-  <path d="M0,165 C350,125 850,195 1200,135 L1200,200 L0,200 Z" fill="#0b1220" opacity="0.55"/>
-  <text x="600" y="88" text-anchor="middle" font-family="Time new roman, Arial, sans-serif" font-size="42" font-weight="700" fill="#e2e8f0" letter-spacing="1">MOHAMMED RIZWAN</text>
-  <text x="600" y="124" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="18" fill="#94a3b8">Software Engineer  |  AWS &amp; DevOps</text>
+
+  <!-- ================= BACKGROUND ================= -->
+
+  <rect width="1200" height="360" rx="12" fill="url(#background)"/>
+
+  <rect width="1200" height="360" rx="12" fill="url(#blueGlow)"/>
+  <rect width="1200" height="360" rx="12" fill="url(#purpleGlow)"/>
+
+  <!-- subtle border -->
+  <rect
+    x="1"
+    y="1"
+    width="1198"
+    height="358"
+    rx="11"
+    stroke="#1E3A5F"
+    stroke-opacity="0.7"
+  />
+
+  <!-- ================= STARS ================= -->
+
+  <g fill="#38BDF8">
+
+    <circle cx="72" cy="48" r="1.4"/>
+    <circle cx="118" cy="88" r="1"/>
+    <circle cx="170" cy="35" r="1.2"/>
+    <circle cx="235" cy="65" r="1"/>
+    <circle cx="318" cy="40" r="1.3"/>
+
+    <circle cx="880" cy="42" r="1"/>
+    <circle cx="930" cy="72" r="1.2"/>
+    <circle cx="1000" cy="35" r="1"/>
+    <circle cx="1090" cy="64" r="1.4"/>
+    <circle cx="1140" cy="42" r="1"/>
+
+  </g>
+
+  <g fill="#A855F7">
+
+    <circle cx="820" cy="82" r="1"/>
+    <circle cx="870" cy="48" r="1.3"/>
+    <circle cx="1040" cy="92" r="1"/>
+    <circle cx="1110" cy="108" r="1.2"/>
+    <circle cx="1160" cy="76" r="1"/>
+
+  </g>
+
+  <!-- ================= CIRCUIT LINES LEFT ================= -->
+
+  <g
+    stroke="#0EA5E9"
+    stroke-opacity="0.45"
+    stroke-width="1"
+  >
+
+    <path d="M0 108 H105 L135 80 H210"/>
+    <path d="M0 130 H80 L115 100 H175"/>
+    <path d="M25 170 H95 L120 145 H180"/>
+    <path d="M40 205 H115 L145 175 H195"/>
+
+    <path d="M180 25 V65 H225"/>
+    <path d="M270 25 V58 H310"/>
+
+  </g>
+
+  <g fill="#0EA5E9">
+
+    <circle cx="105" cy="108" r="2.5"/>
+    <circle cx="210" cy="80" r="2.5"/>
+    <circle cx="80" cy="130" r="2"/>
+    <circle cx="180" cy="145" r="2"/>
+    <circle cx="115" cy="205" r="2.5"/>
+
+  </g>
+
+  <!-- ================= CIRCUIT LINES RIGHT ================= -->
+
+  <g
+    stroke="#A855F7"
+    stroke-opacity="0.45"
+    stroke-width="1"
+  >
+
+    <path d="M1200 108 H1095 L1065 80 H990"/>
+    <path d="M1200 132 H1120 L1085 102 H1020"/>
+    <path d="M1175 172 H1105 L1080 145 H1020"/>
+    <path d="M1160 205 H1085 L1055 175 H1005"/>
+
+    <path d="M1020 25 V60 H975"/>
+    <path d="M930 25 V58 H890"/>
+
+  </g>
+
+  <g fill="#A855F7">
+
+    <circle cx="1095" cy="108" r="2.5"/>
+    <circle cx="990" cy="80" r="2.5"/>
+    <circle cx="1120" cy="132" r="2"/>
+    <circle cx="1020" cy="145" r="2"/>
+    <circle cx="1085" cy="205" r="2.5"/>
+
+  </g>
+
+  <!-- ================= CLOUD GLOW ================= -->
+
+  <path
+    d="M70 150
+       C70 120 92 98 121 98
+       C132 68 160 52 192 58
+       C218 62 237 79 245 101
+       C276 99 300 121 300 150
+       C300 178 277 198 250 198
+       H116
+       C89 198 70 178 70 150Z"
+    stroke="#0EA5E9"
+    stroke-width="9"
+    stroke-opacity="0.16"
+    filter="url(#blueBlur)"
+  />
+
+  <path
+    d="M70 150
+       C70 120 92 98 121 98
+       C132 68 160 52 192 58
+       C218 62 237 79 245 101
+       C276 99 300 121 300 150
+       C300 178 277 198 250 198
+       H116
+       C89 198 70 178 70 150Z"
+    stroke="url(#cloudStroke)"
+    stroke-width="3"
+    fill="#06152B"
+    fill-opacity="0.8"
+  />
+
+  <!-- cloud/server -->
+  <g stroke="#38BDF8" stroke-width="2" fill="none">
+
+    <rect x="112" y="125" width="55" height="16" rx="3"/>
+    <rect x="112" y="147" width="55" height="16" rx="3"/>
+    <rect x="112" y="169" width="55" height="16" rx="3"/>
+
+    <circle cx="122" cy="133" r="2" fill="#38BDF8"/>
+    <circle cx="122" cy="155" r="2" fill="#38BDF8"/>
+    <circle cx="122" cy="177" r="2" fill="#38BDF8"/>
+
+  </g>
+
+  <!-- database -->
+  <g stroke="#38BDF8" stroke-width="2" fill="#08294A">
+
+    <ellipse cx="215" cy="130" rx="32" ry="10"/>
+    <path d="M183 130 V169 C183 175 197 180 215 180 C233 180 247 175 247 169 V130"/>
+    <path d="M183 149 C183 155 197 160 215 160 C233 160 247 155 247 149"/>
+
+  </g>
+
+  <!-- cloud data streams -->
+  <g stroke="#0EA5E9" stroke-opacity="0.7">
+
+    <path d="M125 201 V235"/>
+    <path d="M150 201 V250"/>
+    <path d="M175 201 V228"/>
+    <path d="M200 201 V246"/>
+    <path d="M225 201 V232"/>
+
+  </g>
+
+  <g fill="#38BDF8">
+
+    <circle cx="125" cy="235" r="2"/>
+    <circle cx="150" cy="250" r="2"/>
+    <circle cx="175" cy="228" r="2"/>
+    <circle cx="200" cy="246" r="2"/>
+    <circle cx="225" cy="232" r="2"/>
+
+  </g>
+
+  <!-- ================= AI BRAIN ================= -->
+
+  <path
+    d="M900 93
+       C870 68 826 83 826 119
+       C797 122 788 160 810 180
+       C795 212 820 239 851 233
+       C867 259 906 251 918 228
+       C943 246 980 230 978 199
+       C1008 188 1005 147 982 132
+       C980 98 944 80 920 97
+       C913 87 905 87 900 93Z"
+    stroke="#A855F7"
+    stroke-width="9"
+    stroke-opacity="0.15"
+    filter="url(#purpleBlur)"
+  />
+
+  <path
+    d="M900 93
+       C870 68 826 83 826 119
+       C797 122 788 160 810 180
+       C795 212 820 239 851 233
+       C867 259 906 251 918 228
+       C943 246 980 230 978 199
+       C1008 188 1005 147 982 132
+       C980 98 944 80 920 97
+       C913 87 905 87 900 93Z"
+    stroke="url(#aiStroke)"
+    stroke-width="2.5"
+    fill="#150B2D"
+    fill-opacity="0.85"
+  />
+
+  <!-- neural network -->
+  <g stroke="#C084FC" stroke-opacity="0.75" stroke-width="1.5">
+
+    <path d="M835 128 L875 112 L910 135 L950 113"/>
+    <path d="M815 165 L855 155 L900 170 L940 150 L980 165"/>
+    <path d="M830 205 L870 185 L910 205 L950 185"/>
+    <path d="M875 112 L855 155"/>
+    <path d="M910 135 L900 170"/>
+    <path d="M950 113 L940 150"/>
+    <path d="M855 155 L870 185"/>
+    <path d="M900 170 L910 205"/>
+    <path d="M940 150 L950 185"/>
+
+  </g>
+
+  <g fill="#E9D5FF">
+
+    <circle cx="835" cy="128" r="3"/>
+    <circle cx="875" cy="112" r="3"/>
+    <circle cx="910" cy="135" r="3"/>
+    <circle cx="950" cy="113" r="3"/>
+
+    <circle cx="815" cy="165" r="3"/>
+    <circle cx="855" cy="155" r="3"/>
+    <circle cx="900" cy="170" r="3"/>
+    <circle cx="940" cy="150" r="3"/>
+    <circle cx="980" cy="165" r="3"/>
+
+    <circle cx="830" cy="205" r="3"/>
+    <circle cx="870" cy="185" r="3"/>
+    <circle cx="910" cy="205" r="3"/>
+    <circle cx="950" cy="185" r="3"/>
+
+  </g>
+
+  <!-- AI chip -->
+  <g>
+
+    <rect
+      x="1010"
+      y="145"
+      width="48"
+      height="48"
+      rx="9"
+      fill="#160B2D"
+      stroke="#A855F7"
+      stroke-width="2"
+    />
+
+    <text
+      x="1034"
+      y="176"
+      text-anchor="middle"
+      font-family="Arial, sans-serif"
+      font-size="20"
+      font-weight="700"
+      fill="#C084FC"
+    >AI</text>
+
+    <g stroke="#A855F7" stroke-width="2">
+      <path d="M1005 157 H1010"/>
+      <path d="M1005 169 H1010"/>
+      <path d="M1005 181 H1010"/>
+      <path d="M1058 157 H1063"/>
+      <path d="M1058 169 H1063"/>
+      <path d="M1058 181 H1063"/>
+    </g>
+
+  </g>
+
+  <!-- ================= CENTER IDENTITY ================= -->
+
+  <!-- glowing line -->
+  <path
+    d="M355 125 H440"
+    stroke="#0EA5E9"
+    stroke-width="2"
+    opacity="0.75"
+  />
+
+  <path
+    d="M760 125 H845"
+    stroke="#A855F7"
+    stroke-width="2"
+    opacity="0.75"
+  />
+
+  <!-- Name -->
+  <text
+    x="600"
+    y="112"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="48"
+    font-weight="800"
+    letter-spacing="2"
+    fill="url(#nameGradient)"
+  >
+    MOHAMMED RIZWAN
+  </text>
+
+  <!-- Main identity -->
+  <text
+    x="600"
+    y="151"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="22"
+    font-weight="700"
+    letter-spacing="4"
+  >
+    <tspan fill="#38BDF8">CLOUD</tspan>
+    <tspan fill="#CBD5E1">  ×  </tspan>
+    <tspan fill="#C084FC">AI</tspan>
+    <tspan fill="#CBD5E1">  ×  </tspan>
+    <tspan fill="#38BDF8">INNOVATE</tspan>
+  </text>
+
+  <!-- tagline -->
+  <text
+    x="600"
+    y="180"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="13"
+    letter-spacing="2"
+    fill="#CBD5E1"
+  >
+    BUILDING CLOUD SYSTEMS. EXPLORING AI. SHAPING SOLUTIONS.
+  </text>
+
+  <!-- ================= SPECIALTIES ================= -->
+
+  <!-- Cloud -->
+  <g transform="translate(405 202)">
+
+    <path
+      d="M4 25
+         C4 18 9 13 16 13
+         C19 7 25 4 32 6
+         C38 7 42 11 44 16
+         C51 16 56 21 56 27
+         C56 34 51 38 45 38
+         H14
+         C8 38 4 33 4 25Z"
+      stroke="#38BDF8"
+      stroke-width="2"
+      fill="none"
+    />
+
+    <text
+      x="68"
+      y="24"
+      font-family="Arial, sans-serif"
+      font-size="13"
+      font-weight="700"
+      fill="#E2E8F0"
+    >
+      CLOUD
+    </text>
+
+    <text
+      x="68"
+      y="40"
+      font-family="Arial, sans-serif"
+      font-size="11"
+      fill="#94A3B8"
+    >
+      ENGINEERING
+    </text>
+
+  </g>
+
+  <!-- divider -->
+  <line
+    x1="590"
+    y1="207"
+    x2="590"
+    y2="250"
+    stroke="#334155"
+    stroke-width="1"
+  />
+
+  <!-- AI -->
+  <g transform="translate(610 202)">
+
+    <circle
+      cx="27"
+      cy="25"
+      r="20"
+      stroke="#C084FC"
+      stroke-width="2"
+      fill="none"
+    />
+
+    <path
+      d="M17 25 C17 17 25 15 29 20 C33 15 40 18 40 25 C40 32 33 35 29 30 C25 35 17 32 17 25Z"
+      stroke="#C084FC"
+      stroke-width="1.5"
+      fill="none"
+    />
+
+    <text
+      x="62"
+      y="24"
+      font-family="Arial, sans-serif"
+      font-size="13"
+      font-weight="700"
+      fill="#E2E8F0"
+    >
+      AI
+    </text>
+
+    <text
+      x="62"
+      y="40"
+      font-family="Arial, sans-serif"
+      font-size="11"
+      fill="#94A3B8"
+    >
+      APPLICATIONS
+    </text>
+
+  </g>
+
+  <!-- divider -->
+  <line
+    x1="795"
+    y1="207"
+    x2="795"
+    y2="250"
+    stroke="#334155"
+    stroke-width="1"
+  />
+
+  <!-- Full stack -->
+  <g transform="translate(815 202)">
+
+    <rect
+      x="4"
+      y="8"
+      width="45"
+      height="34"
+      rx="5"
+      stroke="#38BDF8"
+      stroke-width="2"
+      fill="none"
+    />
+
+    <path
+      d="M17 25 L25 18 L33 25 L25 32 Z"
+      stroke="#38BDF8"
+      stroke-width="1.5"
+      fill="none"
+    />
+
+    <text
+      x="62"
+      y="24"
+      font-family="Arial, sans-serif"
+      font-size="13"
+      font-weight="700"
+      fill="#E2E8F0"
+    >
+      FULL-STACK
+    </text>
+
+    <text
+      x="62"
+      y="40"
+      font-family="Arial, sans-serif"
+      font-size="11"
+      fill="#94A3B8"
+    >
+      DEVELOPMENT
+    </text>
+
+  </g>
+
+  <!-- ================= BOTTOM WAVES ================= -->
+
+  <path
+    d="M0 285
+       C130 235 210 330 350 282
+       C470 240 510 320 650 280
+       C780 240 850 330 1000 278
+       C1080 250 1140 275 1200 250"
+    stroke="#0284C7"
+    stroke-width="1"
+    stroke-opacity="0.4"
+    fill="none"
+  />
+
+  <path
+    d="M0 295
+       C130 245 210 340 350 292
+       C470 250 510 330 650 290
+       C780 250 850 340 1000 288
+       C1080 260 1140 285 1200 260"
+    stroke="url(#waveBlue)"
+    stroke-width="2"
+    fill="none"
+  />
+
+  <path
+    d="M600 305
+       C720 260 790 335 900 292
+       C1010 250 1090 310 1200 275"
+    stroke="url(#wavePurple)"
+    stroke-width="2"
+    fill="none"
+  />
+
+  <!-- tiny bottom particles -->
+  <g fill="#38BDF8" opacity="0.7">
+
+    <circle cx="120" cy="300" r="1.5"/>
+    <circle cx="240" cy="325" r="1"/>
+    <circle cx="355" cy="300" r="1.5"/>
+    <circle cx="470" cy="320" r="1"/>
+    <circle cx="735" cy="315" r="1.5"/>
+
+  </g>
+
+  <g fill="#C084FC" opacity="0.7">
+
+    <circle cx="830" cy="305" r="1"/>
+    <circle cx="950" cy="325" r="1.5"/>
+    <circle cx="1070" cy="300" r="1"/>
+    <circle cx="1150" cy="315" r="1.5"/>
+
+  </g>
+
 </svg>
