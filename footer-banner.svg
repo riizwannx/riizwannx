@@ -1,10 +1,414 @@
-<svg viewBox="0 0 1200 90" xmlns="http://www.w3.org/2000/svg">
+<svg
+  width="1200"
+  height="150"
+  viewBox="0 0 1200 150"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+
   <defs>
-    <linearGradient id="bgGradF" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e3a5f"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+
+    <!-- Background -->
+    <linearGradient
+      id="footerBg"
+      x1="0"
+      y1="0"
+      x2="1200"
+      y2="150"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0" stop-color="#020817"/>
+      <stop offset="0.5" stop-color="#071126"/>
+      <stop offset="1" stop-color="#030817"/>
     </linearGradient>
+
+    <!-- Blue -->
+    <linearGradient
+      id="footerBlue"
+      x1="0"
+      y1="0"
+      x2="600"
+      y2="0"
+    >
+      <stop offset="0" stop-color="#0284C7" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#0284C7" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Purple -->
+    <linearGradient
+      id="footerPurple"
+      x1="600"
+      y1="0"
+      x2="1200"
+      y2="0"
+    >
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#C084FC"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Text -->
+    <linearGradient
+      id="footerText"
+      x1="390"
+      y1="0"
+      x2="810"
+      y2="0"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.5" stop-color="#E2E8F0"/>
+      <stop offset="1" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Blue glow -->
+    <radialGradient
+      id="blueGlow"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(90 65) scale(180 100)"
+    >
+      <stop stop-color="#0EA5E9" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Purple glow -->
+    <radialGradient
+      id="purpleGlow"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(1110 65) scale(180 100)"
+    >
+      <stop stop-color="#A855F7" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+
   </defs>
-  <rect width="1200" height="90" fill="url(#bgGradF)"/>
-  <path d="M0,18 C300,55 900,-5 1200,30 L1200,0 L0,0 Z" fill="#0b1220" opacity="0.4"/>
+
+
+  <!-- ================================= -->
+  <!-- BACKGROUND -->
+  <!-- ================================= -->
+
+  <rect
+    width="1200"
+    height="150"
+    fill="url(#footerBg)"
+  />
+
+  <rect
+    width="1200"
+    height="150"
+    fill="url(#blueGlow)"
+  />
+
+  <rect
+    width="1200"
+    height="150"
+    fill="url(#purpleGlow)"
+  />
+
+
+  <!-- ================================= -->
+  <!-- TOP BORDER -->
+  <!-- ================================= -->
+
+  <line
+    x1="40"
+    y1="1"
+    x2="1160"
+    y2="1"
+    stroke="#1E3A5F"
+    stroke-opacity="0.8"
+  />
+
+
+  <!-- ================================= -->
+  <!-- LEFT CIRCUIT -->
+  <!-- ================================= -->
+
+  <g
+    stroke="#0EA5E9"
+    stroke-opacity="0.45"
+    stroke-width="1"
+  >
+
+    <path d="M0 58 H90 L115 35 H165"/>
+    <path d="M0 78 H55 L82 53 H130"/>
+    <path d="M25 105 H105 L135 78 H175"/>
+
+    <path d="M75 20 V42"/>
+    <path d="M165 18 V35"/>
+
+  </g>
+
+  <g fill="#38BDF8">
+
+    <circle cx="90" cy="58" r="2"/>
+    <circle cx="55" cy="78" r="2"/>
+    <circle cx="105" cy="105" r="2"/>
+    <circle cx="75" cy="42" r="2"/>
+    <circle cx="165" cy="35" r="2"/>
+
+  </g>
+
+
+  <!-- ================================= -->
+  <!-- RIGHT CIRCUIT -->
+  <!-- ================================= -->
+
+  <g
+    stroke="#A855F7"
+    stroke-opacity="0.45"
+    stroke-width="1"
+  >
+
+    <path d="M1200 58 H1110 L1085 35 H1035"/>
+    <path d="M1200 78 H1145 L1118 53 H1070"/>
+    <path d="M1175 105 H1095 L1065 78 H1025"/>
+
+    <path d="M1125 20 V42"/>
+    <path d="M1035 18 V35"/>
+
+  </g>
+
+  <g fill="#C084FC">
+
+    <circle cx="1110" cy="58" r="2"/>
+    <circle cx="1145" cy="78" r="2"/>
+    <circle cx="1095" cy="105" r="2"/>
+    <circle cx="1125" cy="42" r="2"/>
+    <circle cx="1035" cy="35" r="2"/>
+
+  </g>
+
+
+  <!-- ================================= -->
+  <!-- CLOUD ICON -->
+  <!-- ================================= -->
+
+  <g transform="translate(185 42)">
+
+    <path
+      d="
+        M10 36
+        C10 27 17 20 26 20
+        C30 11 39 6 49 8
+        C58 9 65 16 67 24
+        C77 24 85 31 85 40
+        C85 50 77 57 67 57
+        H27
+        C17 57 10 49 10 40
+        Z
+      "
+      stroke="#38BDF8"
+      stroke-width="2"
+      fill="#06152B"
+      fill-opacity="0.7"
+    />
+
+    <path
+      d="M34 40 H62"
+      stroke="#38BDF8"
+      stroke-width="2"
+    />
+
+    <path
+      d="M48 31 V48"
+      stroke="#38BDF8"
+      stroke-width="2"
+    />
+
+  </g>
+
+
+  <!-- ================================= -->
+  <!-- AI ICON -->
+  <!-- ================================= -->
+
+  <g transform="translate(930 42)">
+
+    <rect
+      x="10"
+      y="10"
+      width="48"
+      height="48"
+      rx="9"
+      fill="#120A27"
+      stroke="#A855F7"
+      stroke-width="2"
+    />
+
+    <text
+      x="34"
+      y="41"
+      text-anchor="middle"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="18"
+      font-weight="700"
+      fill="#C084FC"
+    >
+      AI
+    </text>
+
+    <g
+      stroke="#A855F7"
+      stroke-width="2"
+    >
+
+      <path d="M5 20 H10"/>
+      <path d="M5 34 H10"/>
+      <path d="M5 48 H10"/>
+
+      <path d="M58 20 H63"/>
+      <path d="M58 34 H63"/>
+      <path d="M58 48 H63"/>
+
+    </g>
+
+  </g>
+
+
+  <!-- ================================= -->
+  <!-- CENTER IDENTITY -->
+  <!-- ================================= -->
+
+  <text
+    x="600"
+    y="48"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14"
+    font-weight="700"
+    letter-spacing="4"
+    fill="url(#footerText)"
+  >
+    CLOUD × AI
+  </text>
+
+  <text
+    x="600"
+    y="72"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="12"
+    letter-spacing="2"
+    fill="#94A3B8"
+  >
+    BUILD • LEARN • SHIP • REPEAT
+  </text>
+
+
+  <!-- ================================= -->
+  <!-- GLOWING DIVIDER -->
+  <!-- ================================= -->
+
+  <line
+    x1="370"
+    y1="91"
+    x2="830"
+    y2="91"
+    stroke="#38BDF8"
+    stroke-opacity="0.18"
+  />
+
+  <line
+    x1="455"
+    y1="91"
+    x2="600"
+    y2="91"
+    stroke="url(#footerBlue)"
+    stroke-width="1.5"
+  />
+
+  <line
+    x1="600"
+    y1="91"
+    x2="745"
+    y2="91"
+    stroke="url(#footerPurple)"
+    stroke-width="1.5"
+  />
+
+
+  <!-- ================================= -->
+  <!-- BOTTOM WAVES -->
+  <!-- ================================= -->
+
+  <path
+    d="
+      M0 125
+      C120 95 185 145 300 120
+      C410 95 480 140 600 115
+      C720 90 790 145 900 118
+      C1020 90 1100 135 1200 105
+    "
+    stroke="url(#footerBlue)"
+    stroke-width="1.5"
+    fill="none"
+    opacity="0.7"
+  />
+
+  <path
+    d="
+      M600 130
+      C720 105 790 145 900 122
+      C1020 98 1110 135 1200 115
+    "
+    stroke="url(#footerPurple)"
+    stroke-width="1.5"
+    fill="none"
+    opacity="0.7"
+  />
+
+
+  <!-- ================================= -->
+  <!-- SIGNATURE -->
+  <!-- ================================= -->
+
+  <text
+    x="600"
+    y="125"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="10"
+    letter-spacing="2"
+    fill="#64748B"
+  >
+    MOHAMMED RIZWAN · 2026
+  </text>
+
+
+  <!-- ================================= -->
+  <!-- SMALL PARTICLES -->
+  <!-- ================================= -->
+
+  <g fill="#38BDF8" opacity="0.7">
+
+    <circle cx="280" cy="30" r="1.5"/>
+    <circle cx="330" cy="112" r="1"/>
+    <circle cx="390" cy="22" r="1"/>
+    <circle cx="820" cy="25" r="1"/>
+    <circle cx="875" cy="112" r="1.5"/>
+
+  </g>
+
+  <g fill="#C084FC" opacity="0.7">
+
+    <circle cx="320" cy="28" r="1"/>
+    <circle cx="850" cy="32" r="1.5"/>
+    <circle cx="900" cy="108" r="1"/>
+    <circle cx="990" cy="25" r="1.2"/>
+
+  </g>
+
 </svg>
