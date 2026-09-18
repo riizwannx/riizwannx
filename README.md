@@ -8,7 +8,7 @@
 
 <br>
 
-# Mohammed Rizwan
+# MOHAMMED RIZWAN
 
 ### ☁️ Cloud & AI Developer · 🤖 AI/LLM Applications · 💻 Software Engineering
 
